@@ -50,19 +50,18 @@ namespace SortVisualizer
             for (int i = 1; (i <= (Items.Count - 1)) && flag; i++)
             {
                 flag = false;
+                Items[i].Colore = "Green";
                 for (int j = 0; j < (Items.Count - 1); j++)
                 {
                     count = count + 1;
                     if (Items[j + 1].Altezza > Items[j].Altezza)
                     {
-                        await Task.Delay(40);
-                        Items[j].Colore = "Green";
+                        await Task.Delay(50);
                         var temp = Items[j];
                         Items[j] = Items[j + 1];
                         Items[j + 1] = temp;
                         flag = true;
-                        Items = Items;
-                        Items[j].Colore = "Black";
+                        await Task.Delay(10);
                     }
                 }
             }
