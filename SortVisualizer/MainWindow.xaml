@@ -17,7 +17,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <Rectangle Width="{Binding Altezza}" Fill="{Binding Colore}" Height="10">
+                            <Rectangle Width="{Binding Altezza}" Fill="{Binding Colore}" Height="{Binding AltezzaElemento}">
                             </Rectangle>
                         </StackPanel>
                     </DataTemplate>
